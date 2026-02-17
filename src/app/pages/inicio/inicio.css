@@ -6,8 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  padding: 55px 10% 60px 10%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hero-container {
@@ -124,36 +125,41 @@
 .stack-retro {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 60px;
-  row-gap: 10px;
+  column-gap: 30px;
+  row-gap: 4px;
   font-family: 'Courier New', monospace;
   color: #38bdf8;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 16px;
+}
+
+.stack-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .stack-header {
-  display: contents;
   font-weight: bold;
   color: #60a5fa;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 1px dashed #38bdf8;
   padding-bottom: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
-.stack-header span {
-  display: block;
-}
-
-.stack-content {
-  display: contents;
-}
-
-.stack-content div p {
-  margin: 4px 0;
+.stack-column p {
+  margin: 1px 0;
   color: #cbd5e1;
+  line-height: 1.35;
+}
+
+@media (max-width: 1200px) {
+  .stack-retro {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -172,12 +178,12 @@
 
   .stack-retro {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 15px;
+    column-gap: 25px;
+    row-gap: 12px;
   }
 
-  .stack-content div p {
-    font-size: 15px;
+  .stack-column p {
+    font-size: 14px;
   }
 }
 
@@ -190,10 +196,10 @@
   .stack-retro {
     grid-template-columns: 1fr;
     column-gap: 0;
-    row-gap: 10px;
+    row-gap: 8px;
   }
 
-  .stack-content div p {
-    font-size: 14px;
+  .stack-column p {
+    font-size: 13px;
   }
 }
