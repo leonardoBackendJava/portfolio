@@ -1,0 +1,16 @@
+<nav>
+
+  <div class="menu" [class.activo]="menuAbierto">
+    <button class="cerrar" (click)="toggleMenu()">✕</button>
+    <a routerLink="/" (click)="menuAbierto=false">Inicio</a>
+    <a routerLink="/proyectos">Proyectos</a>
+    <a routerLink="/sobre-mi">Sobre mí</a>
+    <a routerLink="/contacto">Contacto</a>
+  </div>
+
+<button class="hamburguesa" [hidden]="menuAbierto" (click)="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</nav>
